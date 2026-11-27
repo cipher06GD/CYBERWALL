@@ -1,0 +1,15 @@
+# ============================================================
+# CYBERWALL - Docker Compose
+# Run with:   docker compose up
+# Stop with:  docker compose down
+# Rebuild:    docker compose up --build
+# Game opens at: http://localhost:8080
+# ============================================================
+
+services:
+  cyberwall:
+    build: .
+    container_name: cyberwall
+    ports:
+      - "9080:80"
+    restart: unless-stopped
